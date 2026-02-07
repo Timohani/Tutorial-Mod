@@ -1,6 +1,10 @@
 {
   "item.tutorialmod.pink_garnet": "Розовый Гранат",
   "item.tutorialmod.raw_pink_garnet": "Рудной Розовый Гранат",
+
   "block.tutorialmod.pink_garnet_block": "Блок Розового Граната",
-  "block.tutorialmod.raw_pink_garnet_block": "Блок Рудного Розового Граната"
+  "block.tutorialmod.raw_pink_garnet_block": "Блок Рудного Розового Граната",
+
+  "itemgroup.tutorialmod.pink_garnet_items": "Предметы Розового Граната",
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Блоки Розового Граната"
 }
