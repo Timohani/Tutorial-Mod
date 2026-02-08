@@ -39,11 +39,18 @@ public class ChiselItem extends Item {
                 world.setBlockState(context.getBlockPos(), CHISEL_MAP.get(clickedBlock).getDefaultState());
 
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
-                        item -> Objects.requireNonNull(context.getPlayer()).sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
+                        item -> {
+                            if (context.getPlayer() != null) {
+                                context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND);
+                            }
+                        });
+
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
+
+                return ActionResult.SUCCESS;
             }
         }
 
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 }

@@ -2,6 +2,7 @@ package com.timohani.tutorialmod.item;
 
 import com.timohani.tutorialmod.TutorialMod;
 import com.timohani.tutorialmod.block.ModBlocks;
+import com.timohani.tutorialmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -36,6 +37,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.PINK_GARNET_ORE);
                         entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+
+                        entries.add(ModBlocks.MAGIC_BLOCK);
                     })
                     .build());
 
