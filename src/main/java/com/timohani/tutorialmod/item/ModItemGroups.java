@@ -2,7 +2,6 @@ package com.timohani.tutorialmod.item;
 
 import com.timohani.tutorialmod.TutorialMod;
 import com.timohani.tutorialmod.block.ModBlocks;
-import com.timohani.tutorialmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -23,6 +22,9 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_PINK_GARNET);
 
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.CAULIFLOWER);
+
+                        entries.add(ModItems.STARLIGHT_ASHES);
                     })
                     .build());
 

@@ -2,6 +2,8 @@
   "item.tutorialmod.pink_garnet": "Розовый Гранат",
   "item.tutorialmod.raw_pink_garnet": "Рудной Розовый Гранат",
   "item.tutorialmod.chisel": "Зубило",
+  "item.tutorialmod.cauliflower": "Цветная Капуста",
+  "item.tutorialmod.starlight_ashes": "Освещённый Звёздный Пепел",
 
   "block.tutorialmod.pink_garnet_block": "Блок Розового Граната",
   "block.tutorialmod.raw_pink_garnet_block": "Блок Рудного Розового Граната",
@@ -10,6 +12,11 @@
   "block.tutorialmod.magic_block": "Магический Блок",
 
   "itemgroup.tutorialmod.pink_garnet_items": "Предметы Розового Граната",
-  "itemgroup.tutorialmod.pink_garnet_blocks": "Блоки Розового Граната"
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Блоки Розового Граната",
 
+  "tooltip.tutorialmod.magic_block.tooltip": "Этот блок очень, очень §9МАГИЧЕСКИЙ",
+  "tooltip.tutorialmod.cauliflower": "§7Папа советует её кушать",
+
+  "tooltip.tutorialmod.chisel": "§7Нажмите §eShift§7 для большей информации",
+  "tooltip.tutorialmod.chisel.shift_down": "Этот предмет затачивает блоки в кирпичи!"
 }
