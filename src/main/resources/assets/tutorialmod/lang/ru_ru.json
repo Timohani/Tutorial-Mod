@@ -11,6 +11,16 @@
   "block.tutorialmod.pink_garnet_deepslate_ore": "Глубинная руда розового граната",
   "block.tutorialmod.magic_block": "Магический Блок",
 
+  "block.tutorialmod.pink_garnet_stairs": "Розово-Гранатовые Ступеньки",
+  "block.tutorialmod.pink_garnet_slab": "Розово-Гранатовый Плита",
+  "block.tutorialmod.pink_garnet_button": "Розово-Гранатовая Кнопка",
+  "block.tutorialmod.pink_garnet_pressure_plate": "Розово-Гранатовая Нажимная Плита",
+  "block.tutorialmod.pink_garnet_fence": "Розово-Гранатовый Забор",
+  "block.tutorialmod.pink_garnet_fence_gate": "Розово-Гранатовая Калитка",
+  "block.tutorialmod.pink_garnet_wall": "Розово-Гранатовая Ограда",
+  "block.tutorialmod.pink_garnet_door": "Розово-Гранатовая Дверь",
+  "block.tutorialmod.pink_garnet_trapdoor": "Розово-Гранатовый Люк",
+
   "itemgroup.tutorialmod.pink_garnet_items": "Предметы Розового Граната",
   "itemgroup.tutorialmod.pink_garnet_blocks": "Блоки Розового Граната",
 
