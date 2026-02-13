@@ -23,7 +23,7 @@ public class PinkGarnetLampBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (!world.isClient()) {
-            world.playSound(player, pos, SoundEvents.ENTITY_ALLAY_HURT, SoundCategory.BLOCKS, 1f, 1f);
+            world.playSound(null, pos, SoundEvents.ENTITY_ALLAY_HURT, SoundCategory.BLOCKS, 1f, 1f);
             world.setBlockState(pos, state.cycle(CLICKED));
         }
 

@@ -1,6 +1,7 @@
 package com.timohani.tutorialmod;
 
 import com.timohani.tutorialmod.block.ModBlocks;
+import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -21,6 +22,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 	}
