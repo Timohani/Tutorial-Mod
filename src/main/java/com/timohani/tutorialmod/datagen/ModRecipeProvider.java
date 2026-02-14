@@ -50,5 +50,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.MAGIC_BLOCK)
                 .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_pink_garnet_from_magic_block"));
+
+        // Forced Pink Garnet
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModBlocks.PINK_GARNET_BLOCK)
+                .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "forced_pink_garnet_block_from_block"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.PINK_GARNET_BLOCK, 9)
+                .input(ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "pink_garnet_from_block"));
     }
 }

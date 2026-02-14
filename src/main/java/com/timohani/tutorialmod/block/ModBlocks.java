@@ -17,6 +17,8 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class ModBlocks {
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block FORCED_PINK_GARNET_BLOCK = registerBlock("forced_pink_garnet_block",
+            new Block(AbstractBlock.Settings.create().strength(40f).requiresTool().sounds(BlockSoundGroup.HEAVY_CORE)));
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
             new Block(AbstractBlock.Settings.create().strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)));
 
