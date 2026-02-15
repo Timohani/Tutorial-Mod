@@ -20,6 +20,10 @@
 
   "item.tutorialmod.pink_garnet_horse_armor": "Броня Для Лошади Из Розового Граната",
 
+  "item.tutorialmod.kaupen_armor_trim_smithing_template": "Kaupen Кузнечный Шаблон",
+
+  "item.tutorialmod.kaupen_bow": "Kaupen Лук",
+
 
 
   "block.tutorialmod.pink_garnet_block": "Блок Розового Граната",
@@ -48,5 +52,8 @@
   "tooltip.tutorialmod.cauliflower": "§7Папа советует её кушать",
 
   "tooltip.tutorialmod.chisel": "§7Нажмите §eShift§7 для большей информации",
-  "tooltip.tutorialmod.chisel.shift_down": "Этот предмет затачивает блоки в кирпичи!"
+  "tooltip.tutorialmod.chisel.shift_down": "Этот предмет затачивает блоки в кирпичи!",
+
+  "trim_material.tutorialmod.pink_garnet": "Материал Розового Граната",
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Шаблон"
 }
