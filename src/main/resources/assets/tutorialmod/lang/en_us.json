@@ -20,6 +20,8 @@
 
   "item.tutorialmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
 
+  "item.tutorialmod.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
+
 
 
   "block.tutorialmod.pink_garnet_block": "Pink Garnet Block",
@@ -48,5 +50,8 @@
   "tooltip.tutorialmod.cauliflower": "§7Dad advises to eat it",
 
   "tooltip.tutorialmod.chisel": "§7Press §eShift§7 for more information",
-  "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks!"
+  "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks!",
+
+  "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern"
 }

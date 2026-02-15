@@ -64,5 +64,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModBlocks.FORCED_PINK_GARNET_BLOCK)
                 .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "pink_garnet_from_block"));
+
+        // Trim
+        offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(TutorialMod.MOD_ID, "kaupen"));
     }
 }
