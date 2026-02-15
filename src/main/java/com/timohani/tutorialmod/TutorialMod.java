@@ -4,6 +4,7 @@ import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
+import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -30,6 +31,7 @@ public class TutorialMod implements ModInitializer {
 
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModSounds.registerSounds();
 
         ModDataComponentTypes.registerDataComponentTypes();
 

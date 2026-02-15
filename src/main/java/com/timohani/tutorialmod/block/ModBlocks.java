@@ -3,6 +3,7 @@ package com.timohani.tutorialmod.block;
 import com.timohani.tutorialmod.TutorialMod;
 import com.timohani.tutorialmod.block.custom.MagicBlock;
 import com.timohani.tutorialmod.block.custom.PinkGarnetLampBlock;
+import com.timohani.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -27,7 +28,7 @@ public class ModBlocks {
     public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6), AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
-    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.FROGLIGHT)));
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block", new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS).luminance(state -> 5)));
 
     // Non-Block Blocks
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
