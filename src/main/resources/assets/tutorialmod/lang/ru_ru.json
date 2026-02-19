@@ -27,6 +27,10 @@
   "item.tutorialmod.bar_brawl_music_disc": "Новый Музыкальный Диск",
   "item.tutorialmod.bar_brawl_music_disc.desc": "bbno - 1-800",
 
+  "item.minecraft.potion.effect.slimey_potion": "Зелье Слизи",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Взрывное Зелье Слизи",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Туманное Зелье Слизи",
+
 
 
   "block.tutorialmod.pink_garnet_block": "Блок Розового Граната",
