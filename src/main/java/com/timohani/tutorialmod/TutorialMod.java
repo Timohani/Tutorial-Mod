@@ -2,6 +2,7 @@ package com.timohani.tutorialmod;
 
 import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
+import com.timohani.tutorialmod.effect.ModEffects;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
 import com.timohani.tutorialmod.sound.ModSounds;
@@ -32,6 +33,8 @@ public class TutorialMod implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModSounds.registerSounds();
+
+        ModEffects.registerEffects();
 
         ModDataComponentTypes.registerDataComponentTypes();
 
