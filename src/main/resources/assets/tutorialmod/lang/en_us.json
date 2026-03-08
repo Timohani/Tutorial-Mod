@@ -32,7 +32,10 @@
   "item.minecraft.lingering_potion.effect.slimey_potion": "Lingering Splash Potion",
 
   "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
+  "item.tutorialmod.honey_berries": "Honey Berries",
+
   "block.tutorialmod.cauliflower_crop": "Cauliflower Crop",
+  "block.tutorialmod.honey_berry_bush": "Honey Berry Bush",
 
   "block.tutorialmod.pink_garnet_block": "Pink Garnet Block",
   "block.tutorialmod.forced_pink_garnet_block": "Forced Pink Garnet Block",

@@ -2,6 +2,7 @@ package com.timohani.tutorialmod.block;
 
 import com.timohani.tutorialmod.TutorialMod;
 import com.timohani.tutorialmod.block.custom.CauliflowerCropBlock;
+import com.timohani.tutorialmod.block.custom.HoneyBerryBushBlock;
 import com.timohani.tutorialmod.block.custom.MagicBlock;
 import com.timohani.tutorialmod.block.custom.PinkGarnetLampBlock;
 import com.timohani.tutorialmod.sound.ModSounds;
@@ -63,6 +64,9 @@ public class ModBlocks {
     public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
             new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
+            new HoneyBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
 
 
 
