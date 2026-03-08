@@ -4,6 +4,7 @@ import com.timohani.tutorialmod.Potion.ModPotions;
 import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.effect.ModEffects;
+import com.timohani.tutorialmod.enchantment.ModEnchantmentEffects;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
 import com.timohani.tutorialmod.sound.ModSounds;
@@ -40,11 +41,14 @@ public class TutorialMod implements ModInitializer {
         ModEffects.registerEffects();
         ModPotions.registerPotions();
 
+        ModEnchantmentEffects.registerEnchantmentEffects();
+
         ModDataComponentTypes.registerDataComponentTypes();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 
         PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
             if (entity instanceof SheepEntity sheepEntity && !world.isClient()) {
                 if (player.getMainHandStack().getItem() == Items.END_ROD) {
