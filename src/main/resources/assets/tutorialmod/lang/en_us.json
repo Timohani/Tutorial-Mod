@@ -31,7 +31,8 @@
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Lingering Splash Potion",
 
-
+  "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
+  "block.tutorialmod.cauliflower_crop": "Cauliflower Crop",
 
   "block.tutorialmod.pink_garnet_block": "Pink Garnet Block",
   "block.tutorialmod.forced_pink_garnet_block": "Forced Pink Garnet Block",

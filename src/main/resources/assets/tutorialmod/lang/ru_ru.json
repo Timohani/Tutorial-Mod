@@ -31,7 +31,8 @@
   "item.minecraft.splash_potion.effect.slimey_potion": "Взрывное Зелье Слизи",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Туманное Зелье Слизи",
 
-
+  "item.tutorialmod.cauliflower_seeds": "Семена Цветной Капусты",
+  "block.tutorialmod.cauliflower_crop": "Цветная Капуста",
 
   "block.tutorialmod.pink_garnet_block": "Блок Розового Граната",
   "block.tutorialmod.forced_pink_garnet_block": "Усиленный Блок Розового Граната",
