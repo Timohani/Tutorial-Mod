@@ -1,6 +1,6 @@
 package com.timohani.tutorialmod;
 
-import com.timohani.tutorialmod.Potion.ModPotions;
+import com.timohani.tutorialmod.potion.ModPotions;
 import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.effect.ModEffects;
