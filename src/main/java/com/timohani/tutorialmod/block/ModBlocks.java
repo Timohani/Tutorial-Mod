@@ -1,10 +1,7 @@
 package com.timohani.tutorialmod.block;
 
 import com.timohani.tutorialmod.TutorialMod;
-import com.timohani.tutorialmod.block.custom.CauliflowerCropBlock;
-import com.timohani.tutorialmod.block.custom.HoneyBerryBushBlock;
-import com.timohani.tutorialmod.block.custom.MagicBlock;
-import com.timohani.tutorialmod.block.custom.PinkGarnetLampBlock;
+import com.timohani.tutorialmod.block.custom.*;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -91,7 +88,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
-            new SaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING), Blocks.STONE));
 
 
 
