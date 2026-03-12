@@ -6,7 +6,7 @@ import com.timohani.tutorialmod.effect.ModEffects;
 import com.timohani.tutorialmod.enchantment.ModEnchantmentEffects;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
-import com.timohani.tutorialmod.potion.ModPotions;
+import com.timohani.tutorialmod.potions.ModPotions;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
 import com.timohani.tutorialmod.world.gen.ModWorldGeneration;

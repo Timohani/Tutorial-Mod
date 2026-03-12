@@ -1,4 +1,4 @@
-package com.timohani.tutorialmod.potion;
+package com.timohani.tutorialmod.potions;
 
 import com.timohani.tutorialmod.TutorialMod;
 import com.timohani.tutorialmod.effect.ModEffects;
