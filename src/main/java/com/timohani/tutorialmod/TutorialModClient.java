@@ -16,6 +16,8 @@ public class TutorialModClient implements ClientModInitializer {
         cutOut(ModBlocks.CAULIFLOWER_CROP);
         cutOut(ModBlocks.HONEY_BERRY_BUSH);
 
+        cutOut(ModBlocks.DRIFTWOOD_SAPLING);
+
         ModModelPredicates.registerModelPredicates();
     }
 

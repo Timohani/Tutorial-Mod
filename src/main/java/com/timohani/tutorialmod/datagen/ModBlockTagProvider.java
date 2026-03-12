@@ -22,6 +22,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK)
                 .add(ModBlocks.PINK_GARNET_ORE)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE)
+                .add(ModBlocks.PINK_GARNET_NETHER_ORE)
+                .add(ModBlocks.PINK_GARNET_END_ORE)
                 .add(ModBlocks.MAGIC_BLOCK)
 
                 .add(ModBlocks.PINK_GARNET_WALL)
@@ -40,6 +42,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE)
+                .add(ModBlocks.PINK_GARNET_NETHER_ORE)
+                .add(ModBlocks.PINK_GARNET_END_ORE)
                 .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.FORCED_PINK_GARNET_BLOCK);
 
@@ -52,5 +56,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.DRIFTWOOD_LOG)
+                .add(ModBlocks.DRIFTWOOD_WOOD)
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG)
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
     }
 }

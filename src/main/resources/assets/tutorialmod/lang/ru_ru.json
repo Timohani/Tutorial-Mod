@@ -78,5 +78,16 @@
   "tooltip.tutorialmod.chisel.shift_down": "Этот предмет затачивает блоки в кирпичи!",
 
   "trim_material.tutorialmod.pink_garnet": "Материал Розового Граната",
-  "trim_pattern.tutorialmod.kaupen": "Kaupen Шаблон"
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Шаблон",
+
+  "item.tutorialmod.honey_berries": "Жимолость",
+  "block.tutorialmod.honey_berry_bush": "Куст Жимолости",
+
+  "block.tutorialmod.driftwood_log": "Бревно Тусклого Дерева",
+  "block.tutorialmod.driftwood_wood": "Тусклая Древесина",
+  "block.tutorialmod.stripped_driftwood_log": "Очищенное Бревно Тусклого Дерева",
+  "block.tutorialmod.stripped_driftwood_wood": "Очищенная Тусклая Древесина",
+  "block.tutorialmod.driftwood_planks": "Доски Тусклой Древесины",
+  "block.tutorialmod.driftwood_leaves": "Листва Тусклого Дерева",
+  "block.tutorialmod.driftwood_sapling": "Саженец Тусклого Дерева"
 }
