@@ -34,6 +34,8 @@
   "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
   "item.tutorialmod.honey_berries": "Honey Berries",
 
+  "item.tutorialmod.mantis_spawn_egg": "Mantis Spawn Egg",
+
   "block.tutorialmod.cauliflower_crop": "Cauliflower Crop",
   "block.tutorialmod.honey_berry_bush": "Honey Berry Bush",
 
@@ -90,5 +92,8 @@
   "tooltip.tutorialmod.chisel.shift_down": "This item chisels blocks into bricks!",
 
   "trim_material.tutorialmod.pink_garnet": "Pink Garnet Material",
-  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern"
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern",
+
+
+  "entity.tutorialmod.mantis": "Mantis"
 }

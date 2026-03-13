@@ -4,6 +4,8 @@ import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.effect.ModEffects;
 import com.timohani.tutorialmod.enchantment.ModEnchantmentEffects;
+import com.timohani.tutorialmod.entity.ModEntities;
+import com.timohani.tutorialmod.entity.custom.MantisEntity;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
 import com.timohani.tutorialmod.potions.ModPotions;
@@ -13,6 +15,7 @@ import com.timohani.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -45,6 +48,8 @@ public class TutorialMod implements ModInitializer {
 
         ModDataComponentTypes.registerDataComponentTypes();
         ModWorldGeneration.generateModWorldGen();
+
+        ModEntities.registerModEntities();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 
@@ -79,5 +84,8 @@ public class TutorialMod implements ModInitializer {
 
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_PLANKS, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.DRIFTWOOD_LEAVES, 30, 60);
+
+
+        FabricDefaultAttributeRegistry.register(ModEntities.MANTIS, MantisEntity.createAttributes());
     }
 }

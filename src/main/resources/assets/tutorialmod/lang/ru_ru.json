@@ -89,5 +89,8 @@
   "block.tutorialmod.stripped_driftwood_wood": "Очищенная Тусклая Древесина",
   "block.tutorialmod.driftwood_planks": "Доски Тусклой Древесины",
   "block.tutorialmod.driftwood_leaves": "Листва Тусклого Дерева",
-  "block.tutorialmod.driftwood_sapling": "Саженец Тусклого Дерева"
+  "block.tutorialmod.driftwood_sapling": "Саженец Тусклого Дерева",
+
+  "item.tutorialmod.mantis_spawn_egg": "Яйцо Призыва Богомола",
+  "entity.tutorialmod.mantis": "Богомол"
 }
