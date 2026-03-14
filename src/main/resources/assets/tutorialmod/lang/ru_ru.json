@@ -97,5 +97,6 @@
   "item.tutorialmod.tomahawk": "Томагавк",
   "entity.tutorialmod.tomahawk": "Томагавк",
 
-  "block.tutorialmod.chair": "Стул"
+  "block.tutorialmod.chair": "Стул",
+  "item.tutorialmod.spectre_staff": "Посох Спектра"
 }
