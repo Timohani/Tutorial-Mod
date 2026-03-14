@@ -23,6 +23,7 @@
   "item.tutorialmod.kaupen_armor_trim_smithing_template": "Kaupen Smithing Template",
 
   "item.tutorialmod.kaupen_bow": "Kaupen Bow",
+  "item.tutorialmod.tomahawk": "Tomahawk",
 
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.tutorialmod.bar_brawl_music_disc.desc": "bbno - 1-800",
@@ -95,5 +96,6 @@
   "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Pattern",
 
 
-  "entity.tutorialmod.mantis": "Mantis"
+  "entity.tutorialmod.mantis": "Mantis",
+  "entity.tutorialmod.tomahawk": "Tomahawk"
 }

@@ -6,6 +6,7 @@ import com.timohani.tutorialmod.entity.ModEntities;
 import com.timohani.tutorialmod.item.custom.ChiselItem;
 import com.timohani.tutorialmod.item.custom.HammerItem;
 import com.timohani.tutorialmod.item.custom.ModArmorItem;
+import com.timohani.tutorialmod.item.custom.TomahawkItem;
 import com.timohani.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -87,6 +88,9 @@ public class ModItems {
 
     public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
             new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfaf5f, new Item.Settings()));
+
+    public static final Item TOMAHAWK = registerItem("tomahawk",
+            new TomahawkItem(new Item.Settings().maxCount(16)));
 
 
 

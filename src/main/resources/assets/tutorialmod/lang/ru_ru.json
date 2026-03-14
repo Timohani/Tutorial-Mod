@@ -92,5 +92,8 @@
   "block.tutorialmod.driftwood_sapling": "Саженец Тусклого Дерева",
 
   "item.tutorialmod.mantis_spawn_egg": "Яйцо Призыва Богомола",
-  "entity.tutorialmod.mantis": "Богомол"
+  "entity.tutorialmod.mantis": "Богомол",
+
+  "item.tutorialmod.tomahawk": "Томагавк",
+  "entity.tutorialmod.tomahawk": "Томагавк"
 }
