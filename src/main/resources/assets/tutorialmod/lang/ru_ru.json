@@ -98,5 +98,6 @@
   "entity.tutorialmod.tomahawk": "Томагавк",
 
   "block.tutorialmod.chair": "Стул",
-  "item.tutorialmod.spectre_staff": "Посох Спектра"
+  "item.tutorialmod.spectre_staff": "Посох Спектра",
+  "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger"
 }

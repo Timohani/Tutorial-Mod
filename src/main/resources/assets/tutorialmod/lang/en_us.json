@@ -101,5 +101,7 @@
 
 
   "entity.tutorialmod.mantis": "Mantis",
-  "entity.tutorialmod.tomahawk": "Tomahawk"
+  "entity.tutorialmod.tomahawk": "Tomahawk",
+
+  "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger"
 }

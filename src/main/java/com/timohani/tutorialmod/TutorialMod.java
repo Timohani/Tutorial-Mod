@@ -11,6 +11,7 @@ import com.timohani.tutorialmod.item.ModItems;
 import com.timohani.tutorialmod.potions.ModPotions;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
+import com.timohani.tutorialmod.villager.ModVillagers;
 import com.timohani.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -50,6 +51,7 @@ public class TutorialMod implements ModInitializer {
         ModWorldGeneration.generateModWorldGen();
 
         ModEntities.registerModEntities();
+        ModVillagers.registerVillagers();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 
