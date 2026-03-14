@@ -95,5 +95,7 @@
   "entity.tutorialmod.mantis": "Богомол",
 
   "item.tutorialmod.tomahawk": "Томагавк",
-  "entity.tutorialmod.tomahawk": "Томагавк"
+  "entity.tutorialmod.tomahawk": "Томагавк",
+
+  "block.tutorialmod.chair": "Стул"
 }
