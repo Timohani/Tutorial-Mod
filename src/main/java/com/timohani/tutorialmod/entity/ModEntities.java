@@ -1,6 +1,7 @@
 package com.timohani.tutorialmod.entity;
 
 import com.timohani.tutorialmod.TutorialMod;
+import com.timohani.tutorialmod.entity.custom.ChairEntity;
 import com.timohani.tutorialmod.entity.custom.MantisEntity;
 import com.timohani.tutorialmod.entity.custom.TomahawkProjectileEntity;
 import net.minecraft.entity.EntityType;
@@ -19,6 +20,11 @@ public class ModEntities {
             Identifier.of(TutorialMod.MOD_ID, "tomahawk"),
             EntityType.Builder.<TomahawkProjectileEntity>create(TomahawkProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 1.25f).build());
+
+    public static final EntityType<ChairEntity> CHAIR = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(TutorialMod.MOD_ID, "chair_entity"),
+            EntityType.Builder.create(ChairEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, 0.5f).build());
 
     public static void registerModEntities() {
         TutorialMod.LOGGER.info("Registering Mod Entities for" + TutorialMod.MOD_ID);

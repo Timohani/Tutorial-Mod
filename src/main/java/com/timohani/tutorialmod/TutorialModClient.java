@@ -2,10 +2,7 @@ package com.timohani.tutorialmod;
 
 import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.entity.ModEntities;
-import com.timohani.tutorialmod.entity.client.MantisModel;
-import com.timohani.tutorialmod.entity.client.MantisRender;
-import com.timohani.tutorialmod.entity.client.TomahawkProjectileModel;
-import com.timohani.tutorialmod.entity.client.TomahawkProjectileRenderer;
+import com.timohani.tutorialmod.entity.client.*;
 import com.timohani.tutorialmod.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -32,6 +29,8 @@ public class TutorialModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(TomahawkProjectileModel.TOMAHAWK, TomahawkProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.TOMAHAWK, TomahawkProjectileRenderer::new);
+
+        EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
     }
 
     private static void cutOut(Block block) {
