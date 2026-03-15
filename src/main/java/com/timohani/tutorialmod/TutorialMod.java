@@ -1,6 +1,7 @@
 package com.timohani.tutorialmod;
 
 import com.timohani.tutorialmod.block.ModBlocks;
+import com.timohani.tutorialmod.block.entity.ModBlockEntities;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
 import com.timohani.tutorialmod.effect.ModEffects;
 import com.timohani.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -59,6 +60,8 @@ public class TutorialMod implements ModInitializer {
         ModParticles.registerParticles();
 
         ModLootTableModifiers.modifyLootTables();
+
+        ModBlockEntities.registerBlockEntities();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 
