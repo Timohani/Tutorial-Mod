@@ -1,6 +1,8 @@
 package com.timohani.tutorialmod;
 
 import com.timohani.tutorialmod.block.ModBlocks;
+import com.timohani.tutorialmod.block.entity.ModBlockEntities;
+import com.timohani.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.timohani.tutorialmod.entity.ModEntities;
 import com.timohani.tutorialmod.entity.client.*;
 import com.timohani.tutorialmod.particle.ModParticles;
@@ -13,6 +15,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
 public class TutorialModClient implements ClientModInitializer {
     @Override
@@ -36,6 +39,8 @@ public class TutorialModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.PINK_GARNET_PARTICLE, PinkGarnetParticle.Factory::new);
+
+        BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
     }
 
     private static void cutOut(Block block) {

@@ -34,12 +34,15 @@ public class ModVillagerTrades {
                     new ItemStack(ModItems.CHISEL, 1), 3, 2, 0.04f));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 10),
-                    new ItemStack(ModBlocks.DRIFTWOOD_SAPLING, 1), 3, 2, 0.04f));
+                    new ItemStack(ModBlocks.DRIFTWOOD_SAPLING, 1), 30, 2, 0.04f));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.DIRT, 10),
+                    new ItemStack(Items.SLIME_BALL, 1), 30, 10, 0.04f));
         });
 
         TradeOfferHelper.registerVillagerOffers(ModVillagers.KAUPENGER, 2, factories -> factories.add((entity, random) -> new TradeOffer(
                 new TradedItem(ModItems.PINK_GARNET, 10),
                 Optional.of(new TradedItem(Items.IRON_NUGGET, 2)),
-                new ItemStack(ModItems.TOMAHAWK, 1), 3, 12, 0.04f)));
+                new ItemStack(ModItems.TOMAHAWK, 1), 64, 12, 0.04f)));
     }
 }
