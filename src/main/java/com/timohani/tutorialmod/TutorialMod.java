@@ -12,6 +12,7 @@ import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.potions.ModPotions;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
+import com.timohani.tutorialmod.util.ModLootTableModifiers;
 import com.timohani.tutorialmod.villager.ModVillagerTrades;
 import com.timohani.tutorialmod.villager.ModVillagers;
 import com.timohani.tutorialmod.world.gen.ModWorldGeneration;
@@ -56,6 +57,8 @@ public class TutorialMod implements ModInitializer {
         ModVillagers.registerVillagers();
         ModVillagerTrades.createTrades();
         ModParticles.registerParticles();
+
+        ModLootTableModifiers.modifyLootTables();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 

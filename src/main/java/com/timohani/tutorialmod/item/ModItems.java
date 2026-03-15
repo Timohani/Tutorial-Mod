@@ -33,7 +33,7 @@ public class ModItems {
         }
     });
 
-    public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
+    public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings().fireproof()));
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
             new SwordItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
