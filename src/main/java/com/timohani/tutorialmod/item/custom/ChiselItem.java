@@ -11,6 +11,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -28,7 +30,10 @@ public class ChiselItem extends Item {
                     Blocks.END_STONE, Blocks.END_STONE_BRICKS,
                     Blocks.OAK_LOG, ModBlocks.PINK_GARNET_BLOCK,
                     Blocks.GOLD_BLOCK, Blocks.NETHERITE_BLOCK,
-                    Blocks.STRIPPED_OAK_LOG, Blocks.OAK_LOG
+                    Blocks.STRIPPED_OAK_LOG, Blocks.OAK_LOG,
+                    Blocks.CHEST, Blocks.BARREL,
+                    ModBlocks.STRIPPED_DRIFTWOOD_LOG, Blocks.BEDROCK,
+                    Blocks.BEDROCK, ModBlocks.STRIPPED_DRIFTWOOD_LOG
             );
 
     public ChiselItem(Settings settings) {
@@ -52,6 +57,10 @@ public class ChiselItem extends Item {
                         });
 
                 world.playSound(null, context.getBlockPos(), ModSounds.CHISEL_USE, SoundCategory.BLOCKS);
+
+                ((ServerWorld) world).spawnParticles(new BlockStateParticleEffect(ParticleTypes.BLOCK, clickedBlock.getDefaultState()),
+                        context.getBlockPos().getX() + 0.5, context.getBlockPos().getY() + 1,
+                        context.getBlockPos().getZ() + 0.5, 5, 0, 0, 0, 0.1);
 
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
 
