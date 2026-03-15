@@ -8,6 +8,7 @@ import com.timohani.tutorialmod.entity.ModEntities;
 import com.timohani.tutorialmod.entity.custom.MantisEntity;
 import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
+import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.potions.ModPotions;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
@@ -54,6 +55,7 @@ public class TutorialMod implements ModInitializer {
         ModEntities.registerModEntities();
         ModVillagers.registerVillagers();
         ModVillagerTrades.createTrades();
+        ModParticles.registerParticles();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 

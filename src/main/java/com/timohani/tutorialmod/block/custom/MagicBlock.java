@@ -1,5 +1,6 @@
 package com.timohani.tutorialmod.block.custom;
 
+import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -28,6 +29,8 @@ public class MagicBlock extends Block {
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
                                  BlockHitResult hit) {
+        world.addParticle(ModParticles.PINK_GARNET_PARTICLE, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5,
+                0, 1, 0);
         world.playSound(player, pos, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1f, 1f);
         return ActionResult.SUCCESS;
     }

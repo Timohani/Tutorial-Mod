@@ -2,6 +2,7 @@ package com.timohani.tutorialmod.item.custom;
 
 import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.component.ModDataComponentTypes;
+import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -33,7 +34,7 @@ public class ChiselItem extends Item {
                     Blocks.STRIPPED_OAK_LOG, Blocks.OAK_LOG,
                     Blocks.CHEST, Blocks.BARREL,
                     ModBlocks.STRIPPED_DRIFTWOOD_LOG, Blocks.BEDROCK,
-                    Blocks.BEDROCK, ModBlocks.STRIPPED_DRIFTWOOD_LOG
+                    Blocks.BEDROCK, ModBlocks.DRIFTWOOD_LOG
             );
 
     public ChiselItem(Settings settings) {
@@ -61,6 +62,9 @@ public class ChiselItem extends Item {
                 ((ServerWorld) world).spawnParticles(new BlockStateParticleEffect(ParticleTypes.BLOCK, clickedBlock.getDefaultState()),
                         context.getBlockPos().getX() + 0.5, context.getBlockPos().getY() + 1,
                         context.getBlockPos().getZ() + 0.5, 5, 0, 0, 0, 0.1);
+                ((ServerWorld) world).spawnParticles(ModParticles.PINK_GARNET_PARTICLE,
+                        context.getBlockPos().getX() + 0.5, context.getBlockPos().getY() + 1,
+                        context.getBlockPos().getZ() + 0.5, 5, 0, 0, 0, 2);
 
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
 
