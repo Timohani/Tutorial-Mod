@@ -8,6 +8,7 @@ import com.timohani.tutorialmod.entity.client.*;
 import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.particle.PinkGarnetParticle;
 import com.timohani.tutorialmod.screen.ModScreenHandlers;
+import com.timohani.tutorialmod.screen.custom.GrowthChamberScreen;
 import com.timohani.tutorialmod.screen.custom.PedestalScreen;
 import com.timohani.tutorialmod.util.ModModelPredicates;
 import net.fabricmc.api.ClientModInitializer;
@@ -46,6 +47,7 @@ public class TutorialModClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
 
         HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
+        HandledScreens.register(ModScreenHandlers.GROWTH_CHAMBER_SCREEN_HANDLER, GrowthChamberScreen::new);
     }
 
     private static void cutOut(Block block) {

@@ -101,6 +101,7 @@
   "item.tutorialmod.spectre_staff": "Посох Спектра",
 
   "entity.minecraft.villager.kaupenger": "Kaupenger",
-  "block.tutorialmod.pedestal": "Пьедестал"
+  "block.tutorialmod.pedestal": "Пьедестал",
+  "block.tutorialmod.growth_chamber": "Камера Выращивания"
 
 }
