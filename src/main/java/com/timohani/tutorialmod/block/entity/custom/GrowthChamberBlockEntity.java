@@ -2,7 +2,9 @@ package com.timohani.tutorialmod.block.entity.custom;
 
 import com.timohani.tutorialmod.block.entity.ImplementedInventory;
 import com.timohani.tutorialmod.block.entity.ModBlockEntities;
-import com.timohani.tutorialmod.item.ModItems;
+import com.timohani.tutorialmod.recipe.GrowthChamberRecipe;
+import com.timohani.tutorialmod.recipe.GrowthChamberRecipeInput;
+import com.timohani.tutorialmod.recipe.ModRecipes;
 import com.timohani.tutorialmod.screen.custom.GrowthChamberScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -10,12 +12,12 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -25,6 +27,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -51,8 +55,10 @@ public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScr
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0: GrowthChamberBlockEntity.this.progress = value;
-                    case 1: GrowthChamberBlockEntity.this.maxProgress = value;
+                    case 0:
+                        GrowthChamberBlockEntity.this.progress = value;
+                    case 1:
+                        GrowthChamberBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -100,11 +106,11 @@ public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScr
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
-        if(hasRecipe()) {
+        if (hasRecipe()) {
             increaseCraftingProgress();
             markDirty(world, pos, state);
 
-            if(hasCraftingFinished()) {
+            if (hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
             }
@@ -115,11 +121,13 @@ public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScr
 
     private void resetProgress() {
         this.progress = 0;
-        this.maxProgress = 72;
+        this.maxProgress = 1200;
     }
 
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.PINK_GARNET, 6);
+        Optional<RecipeEntry<GrowthChamberRecipe>> recipe = getCurrentRecipe();
+
+        ItemStack output = recipe.get().value().output();
 
         this.removeStack(INPUT_SLOT, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -135,11 +143,19 @@ public class GrowthChamberBlockEntity extends BlockEntity implements ExtendedScr
     }
 
     private boolean hasRecipe() {
-        Item input = ModItems.RAW_PINK_GARNET;
-        ItemStack output = new ItemStack(ModItems.PINK_GARNET, 6);
+        Optional<RecipeEntry<GrowthChamberRecipe>> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) {
+            return false;
+        }
 
-        return this.getStack(INPUT_SLOT).isOf(input) &&
-                canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        ItemStack output = recipe.get().value().output();
+
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeEntry<GrowthChamberRecipe>> getCurrentRecipe() {
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(ModRecipes.GROWTH_CHAMBER_TYPE, new GrowthChamberRecipeInput(inventory.getFirst()), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

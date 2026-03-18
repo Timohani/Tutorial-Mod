@@ -11,6 +11,7 @@ import com.timohani.tutorialmod.item.ModItemGroups;
 import com.timohani.tutorialmod.item.ModItems;
 import com.timohani.tutorialmod.particle.ModParticles;
 import com.timohani.tutorialmod.potions.ModPotions;
+import com.timohani.tutorialmod.recipe.ModRecipes;
 import com.timohani.tutorialmod.screen.ModScreenHandlers;
 import com.timohani.tutorialmod.sound.ModSounds;
 import com.timohani.tutorialmod.util.HammerUsageEvent;
@@ -64,6 +65,8 @@ public class TutorialMod implements ModInitializer {
 
         ModBlockEntities.registerBlockEntities();
         ModScreenHandlers.registerScreenHandlers();
+
+        ModRecipes.registerRecipes();
 
         FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 20000);
 
