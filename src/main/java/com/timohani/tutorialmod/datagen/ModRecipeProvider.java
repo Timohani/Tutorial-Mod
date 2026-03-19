@@ -5,6 +5,7 @@ import com.timohani.tutorialmod.block.ModBlocks;
 import com.timohani.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -67,5 +68,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // Trim
         offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(TutorialMod.MOD_ID, "kaupen"));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_GARNET_AXE)
+                .pattern("FF ")
+                .pattern("FA ")
+                .pattern(" B ")
+                .input('F', ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .input('A', Items.DIAMOND_AXE)
+                .input('B', Blocks.DIAMOND_BLOCK)
+                .criterion(hasItem(ModBlocks.FORCED_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.FORCED_PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_GARNET_HOE)
+                .pattern("FF ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .input('F', ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .input('A', Items.DIAMOND_HOE)
+                .input('B', Blocks.DIAMOND_BLOCK)
+                .criterion(hasItem(ModBlocks.FORCED_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.FORCED_PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_GARNET_PICKAXE)
+                .pattern("FFF")
+                .pattern(" A ")
+                .pattern(" B ")
+                .input('F', ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .input('A', Items.DIAMOND_PICKAXE)
+                .input('B', Blocks.DIAMOND_BLOCK)
+                .criterion(hasItem(ModBlocks.FORCED_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.FORCED_PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_GARNET_SHOVEL)
+                .pattern(" F ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .input('F', ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .input('A', Items.DIAMOND_SHOVEL)
+                .input('B', Blocks.DIAMOND_BLOCK)
+                .criterion(hasItem(ModBlocks.FORCED_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.FORCED_PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_GARNET_SWORD)
+                .pattern("BFB")
+                .pattern("BFB")
+                .pattern("BAB")
+                .input('F', ModBlocks.FORCED_PINK_GARNET_BLOCK)
+                .input('A', Items.DIAMOND_SWORD)
+                .input('B', Blocks.DIAMOND_BLOCK)
+                .criterion(hasItem(ModBlocks.FORCED_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.FORCED_PINK_GARNET_BLOCK))
+                .offerTo(exporter);
     }
 }
